@@ -1,4 +1,4 @@
-// Captura el contenedor del slider1
+// slider1
 const slider1 = document.querySelector('.boxanimaleshorizontallist');
 
 let isDown1 = false;
@@ -47,7 +47,7 @@ function handleMouseMove1(e) {
     if (!isDown1) return;
     e.preventDefault();
     const x = e.pageX - slider1.offsetLeft;
-    const walk = (x - startX1) * 1; // Ajusta la sensibilidad del desplazamiento
+    const walk = (x - startX1) * 2; 
     slider1.scrollLeft = scrollLeft1 - walk;
 }
 
@@ -55,12 +55,12 @@ function handleTouchMove1(e) {
     if (!isDown1) return;
     e.preventDefault();
     const x = e.touches[0].pageX - slider1.offsetLeft;
-    const walk = (x - startX1) * 1; // Ajusta la sensibilidad del desplazamiento
+    const walk = (x - startX1) * 2; 
     slider1.scrollLeft = scrollLeft1 - walk;
 }
 
 
-// Captura el contenedor del slider2
+// slider2
 const slider2 = document.querySelector('.boxplantashorizontallist');
 
 let isDown2 = false;
@@ -109,7 +109,7 @@ function handleMouseMove2(e) {
     if (!isDown2) return;
     e.preventDefault();
     const x = e.pageX - slider2.offsetLeft;
-    const walk = (x - startX2) * 1; // Ajusta la sensibilidad del desplazamiento
+    const walk = (x - startX2) * 2; 
     slider2.scrollLeft = scrollLeft2 - walk;
 }
 
@@ -117,6 +117,24 @@ function handleTouchMove2(e) {
     if (!isDown2) return;
     e.preventDefault();
     const x = e.touches[0].pageX - slider2.offsetLeft;
-    const walk = (x - startX2) * 1; // Ajusta la sensibilidad del desplazamiento
+    const walk = (x - startX2) * 2; 
     slider2.scrollLeft = scrollLeft2 - walk;
+}
+
+//screen detall
+
+function ShowdetaillScreen(){
+    const screendetaill = document.getElementById("ScreenDetail");
+    const screenPrincipal = document.getElementById("ScreenPrinciapal");
+
+    screenPrincipal.classList.add("hide");
+    screendetaill.classList.remove("hide");
+}
+
+function HidedetaillScreen(){
+    const screendetaill = document.getElementById("ScreenDetail");
+    const screenPrincipal = document.getElementById("ScreenPrinciapal");
+
+    screenPrincipal.classList.remove("hide");
+    screendetaill.classList.add("hide");
 }
