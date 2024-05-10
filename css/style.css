@@ -1,0 +1,552 @@
+:root {
+    --color-fondo: #e8e5e5;
+    --gradient: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0) 100%);
+    --gradient2: linear-gradient(0deg, rgb(0, 0, 0, 0.6) 0%, rgba(0,0,0,0) 100%);
+    --color1: #dddddd;
+    --color2: #000;
+    --color3: #ffffff;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kantumruy Pro", sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: var(--color-fondo);
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' -25,
+  'opsz' 24
+}
+
+.boxmenu{
+    position: fixed;
+    top: 10px;
+    right: 40px;
+    z-index: 50;
+}
+
+.boxmenu span{
+    color: var(--color-fondo);
+    font-size: 30px;
+}
+.boxfondo{
+    width: 98%;
+    position: fixed;
+    left: 1%;
+    background-color: var(--color1);
+    height: 640px;
+    border-radius: 0px 0px 35px 35px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.layerfondo{
+    width: 100%;
+    height: 630px;
+    background: rgb(2,0,36);
+    background: var(--gradient);
+    position: relative;
+}
+
+.buttomNav{
+    position: fixed;
+    bottom: 30px;
+    width: 20%;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 400;
+    left: 35%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
+}
+
+.itemnav{
+    text-decoration: none;
+    color: var(--color2);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.bostitle{
+    display: flex;
+    margin-left: 7%;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+    top: 60px;
+    align-items: start;
+    justify-content: start;
+}
+
+.titulo{
+    color: var(--color3);
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+
+.subtitulo{
+    color: var(--color3);
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: -5px;
+    margin-left: -2px;
+}
+
+.labeltitulo{
+    color: var(--color3);
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 300;
+    margin-top: 3px;
+}
+
+.boxfavoritos{
+    display: flex;
+    position: relative;
+    top: 130px;
+    left: 7%;
+    z-index: 2;
+    justify-content: space-between;
+    width: 110px;
+    align-items: center;
+}
+
+.boxheart{
+    display: flex;
+    background-color: var(--color1);
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-right: 10px;
+    width: 90px;
+}
+
+.boxheart span{
+    padding: 12px;
+    margin-top: 2px;
+    font-size: 28px;
+}
+
+.favoritesubtitle{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color3);
+}
+
+.favoritetitle{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color3);
+}
+
+.boxanimales{
+    width: 86%;
+    left: 7%;
+    position: relative;
+    top: 160px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.animalestitle{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color3);
+}
+
+.linkmasanimales{
+    background-color: var(--color1);
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.masalinaleslink{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color2);
+}
+
+.boxanimaleshorizontallist{
+    position: relative;
+    top: 180px;
+    z-index: 2;
+    display: flex;
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    width: 100%;
+    padding: 10px 0; 
+    cursor: move;
+}
+
+.spaceinicial{
+    width: 100px;
+    height: 170px;
+    position: relative;
+    padding-right: 6%;
+}
+
+.spacefinal{
+    width: 100px;
+    height: 170px;
+    position: relative;
+    padding-right: 7%;
+}
+
+.itemlistanimal{
+    height: 230px;
+    border-radius: 10px;
+    background-color: var(--color1);
+    flex: 0 0 auto;
+    margin-left: 1%; 
+    width: 400px; 
+    overflow: hidden;
+}
+
+.layeranimal{
+    width: 400px;
+    height: 230px;    
+    background: var(--gradient2);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.contenidoanimal{
+    z-index: 3;
+    position: absolute;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 190px;
+}
+
+.nombreanimal{
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--color3);
+}
+.boxbtn{
+    margin-top: 10px;
+}
+.boxbtn a{
+    text-decoration: none;
+    font-size: 12px;
+    background-color: var(--color1);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--color2);
+}
+
+.boxanimaltop{
+    width: 370px;
+    display: flex;
+    justify-content: end;
+}
+
+.boxfavoriteanimal{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: var(--color1);
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.boxfavoriteanimal span{
+    font-size: 20px;
+}
+
+
+.boxplantas{
+    width: 95%;
+    left: 2.5%;
+    position: relative;
+    top: 220px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.plantastitle{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color2);
+}
+
+.linkmasplantas{
+    background-color: var(--color1);
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.masplantaslink{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color2);
+}
+
+
+.boxplantashorizontallist{
+    position: relative;
+    top: 230px;
+    z-index: 2;
+    display: flex;
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    width: 100%;
+    padding: 10px 0; 
+    cursor: move;
+    height: 190px;
+}
+
+.spaceinicialplantas{
+    width: 50px;
+    height: 190px;
+    position: relative;
+    padding-right: 1%;
+}
+
+.spacefinalplantas{
+    width: 100px;
+    height: 190px;
+    position: relative;
+    padding-right: 2%;
+}
+
+.itemlistplantas{
+    height: 190px;
+    border-radius: 10px;
+    background-color: var(--color1);
+    flex: 0 0 auto;
+    margin-left: 1%; 
+    width: 420px; 
+    overflow: hidden;
+}
+
+.layerplantas{
+    width: 420px;
+    height: 190px;    
+    background: var(--gradient2);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.contenidoplantas{
+    z-index: 3;
+    position: absolute;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+}
+
+.nombreplantas{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color3);
+}
+
+.boxplantastop{
+    width: 390px;
+    display: flex;
+    justify-content: end;
+}
+
+.boxfavoriteplantas{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: var(--color1);
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.boxfavoriteplantas span{
+    font-size: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .boxfondo{
+        width: 90%;        
+        left: 5%;       
+        height: 630px;       
+    }
+    
+    .layerfondo{
+        width: 100%;
+        height: 630px;        
+    }
+    
+    .buttomNav{       
+        bottom: 0px;
+        width: 70%;        
+        padding-left: 15%;
+        padding-right: 15%;
+        left: 0px;
+        border-radius: 0px;
+    }
+    
+   
+    .bostitle{       
+        margin-left: 10%;       
+        top: 60px;
+    }
+    
+    .titulo{       
+        font-size: 50px;
+        font-weight: 500;
+        margin-left: -3px;
+    }
+    
+    .subtitulo{        
+        font-size: 25px;
+        font-weight: 500;
+        margin-top: -5px;
+        margin-left: -2px;
+    }
+    
+    .labeltitulo{
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: 300;
+        margin-top: 3px;
+    }
+    
+    .boxfavoritos{
+        left: 10%;
+    }
+    
+      
+    .boxanimales{
+        width: 80%;
+        left: 10%;
+    }
+      
+    
+    .boxanimaleshorizontallist{
+        top: 180px;
+        display: flex;       
+    }
+    
+    .spaceinicial{
+        padding-right: 5%;
+    }
+    
+    .spacefinal{
+        padding-right: 10%;
+    }
+    
+    .itemlistanimal{
+        height: 230px;
+        border-radius: 10px;
+        margin-left: 3%; 
+        width: 170px; 
+    }
+    
+    .layeranimal{
+        width: 170px;
+        height: 230px;    
+        border-radius: 10px;
+    }
+    
+    .contenidoanimal{       
+        padding: 15px;
+        height: 190px;
+    }
+    
+    .nombreanimal{
+        font-weight: 500;
+        font-size: 15px;
+    }
+       
+    .boxanimaltop{
+        width: 140px;        
+    }
+    
+   
+    .boxplantas{
+        width: 90%;
+        left: 5%;       
+        top: 220px;        
+    }
+    
+    .plantastitle{
+        font-size: 20px;
+    }
+    
+    .boxplantashorizontallist{       
+        top: 230px;       
+        padding: 10px 0; 
+        height: 140px;
+    }
+    
+    .spaceinicialplantas{
+        width: 50px;
+        height: 140px;
+        padding-right: 2%;
+    }
+    
+    .spacefinalplantas{
+        width: 100px;
+        height: 140px;
+        padding-right: 5%;
+    }
+    
+    .itemlistplantas{
+        height: 140px;        
+        margin-left: 3%; 
+        width: 190px; 
+    }
+    
+    .layerplantas{
+        width: 190px;
+        height: 140px;    
+        }
+    
+    .contenidoplantas{       
+        padding: 15px;      
+        height: 110px;
+    }
+    
+    .nombreplantas{
+        font-weight: 500;
+        font-size: 15px;
+    }
+    
+    .boxplantastop{
+        width: 160px;
+    }   
+   
+}
